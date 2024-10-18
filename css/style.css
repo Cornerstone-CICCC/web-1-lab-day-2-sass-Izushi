@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: yellow;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 1000;
+}
+header nav ul {
+  display: flex;
+  list-style: none;
+  padding-inline-start: 0;
+  margin-bottom: 0;
+}
+header nav li {
+  margin-right: 10px;
+}
+header nav li:last-child {
+  margin-right: 0;
+}
+
+main {
+  margin-top: 84px;
+  width: 100%;
+}
+main section h2 {
+  background-color: cyan;
+  position: sticky;
+  top: 84px;
+  z-index: 100;
+}
+main section .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section .gallery img {
+  max-width: 33.3%;
+}
+main .fruit-hover figure {
+  position: relative;
+  margin-inline: 0;
+}
+main .fruit-hover figure img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+main .fruit-hover figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  color: white;
+  padding: 5px;
+  display: none;
+}
+main .fruit-hover figure img:hover + figcaption {
+  display: block;
+}
+main .back-to-top-btn {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1000;
+  background-color: black;
+  padding: 10px;
+}
+main .back-to-top-btn a {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  main section .gallery img {
+    max-width: calc(50% - 10px);
+  }
+}
+@media (max-width: 480px) {
+  main section .gallery img {
+    max-width: 100%;
+  }
+  .back-to-top-btn {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
